@@ -10,8 +10,21 @@ app.use(compression());
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
+function sanitize(message) {
+  const blacklist = [
+    /<\/?style>/ig,
+    /<\/?script>/ig,
+  ];
+  blacklist.forEach((tag) => {
+    message = message.replace(tag, '');
+  });
+  return message;
+}
+
 function serializeMessage(info) {
   let { type, name, message } = info;
+  name = sanitize(name);
+  message = sanitize(message);
   let timestamp = +new Date();
   return JSON.stringify({ type, name, message, timestamp });
 }
