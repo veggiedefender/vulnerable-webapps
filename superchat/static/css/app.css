@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Zilla+Slab');
+
+body {
+  color: #373737;
+  font-family: 'Zilla Slab';
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.container, #textbox {
+  width: 100%;
+  max-width: 960px;
+}
+
+h1 {
+  font-family: Futura, 'Open Sans', sans-serif;
+  background-color: red;
+  color: #fff;
+  font-style: italic;
+  font-size: 50px;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  padding: 0 0.25em 0.2em 0.1em;
+} h1:hover span {
+  display: none;
+} h1:hover::after {
+  content: 'Skrrt Skrrt';
+}
+
+#messages {
+  margin-bottom: 25vh;
+}
+
+.message {
+  display: flex;
+}
+
+.name {
+  background-color: red;
+  padding: 0.1em 0.3em;
+  color: #fff;
+  margin-right: 0.5ch;
+}
+
+.text {
+  word-break: break-all;
+}
+
+.time {
+  color: #ccc;
+  margin-left: auto;
+  padding-left: 1ch;
+  font-family: Futura, 'Open Sans', sans-serif;
+}
+
+#textbox {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 50px;
+  box-shadow: 0 0 16px 0px #00000033;
+  overflow: hidden;
+  font-size: 0.95em;
+}
+
+#textbox:focus-within {
+  box-shadow: 0 0 20px 3px #00000033;
+  transition: 0.1s ease;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border: none;
+  border-right: none;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0.4em 0.5em;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  flex: 1;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 0 1em;
+  cursor: pointer;
+} button:hover {
+  background-color: #ce0000;
+}
+
+.count {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #00E676;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.1em 0.3em;
+}
+
+@media (min-width: 400px) {
+  .container, #textbox {
+    width: 85%;
+    padding: 0;
+  }
+
+  #textbox {
+    margin-bottom: 1em;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 550px) {
+  .container, #textbox {
+    width: 80%;
+  }
+}
