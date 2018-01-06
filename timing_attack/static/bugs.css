@@ -5,10 +5,15 @@ body {
 h1, h2 {
   font-family: "VT323";
   font-size: 50px;
+  margin-bottom: 0;
 }
 
 h2 {
   font-weight: normal;
+}
+
+p {
+  margin-top: 0;
 }
 
 .container {
