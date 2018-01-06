@@ -1,0 +1,5 @@
+"""
+Configuration file containing the password. Rename this to config.py
+if you want to run the server on your own computer.
+"""
+PASSWORD = "hunter2"
