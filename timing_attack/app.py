@@ -41,7 +41,7 @@ def login():
     API endpoint for logging in based on the POSTed password, sends
     back a boolean indicating success or failure
     """
-    attempt = get_data("password")
+    attempt = get_data("password") or ""
     return jsonify(secure_compare(app.config["PASSWORD"], attempt))
 
 
