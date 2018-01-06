@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ACCESS DENIED</title>
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    
+    <form id="loginForm">
+      <p>ENTER PASSWORD</p>
+      <input type="password" id="password" autofocus>
+      <input type="submit" value="SUBMIT" id="submit">
+    </form>
   </body>
 </html>
