@@ -17,6 +17,11 @@ p {
   word-break: break-word;
 }
 
+a {
+  font-size: 25px;
+  float: right;
+}
+
 #loginForm {
   display: flex;
   flex-direction: column;
@@ -37,7 +42,8 @@ p {
 
 #submit {
   background-color: red;
-  border: 0;
+  border: none;
+  outline: none;
   padding: 10px;
   color: #fff;
   box-shadow: 6px 6px 0 black;
@@ -46,8 +52,19 @@ p {
   box-shadow: 12px 12px 0 black;
 }
 
+#message {
+  font-size: 25px;
+  margin-top: 18px;
+} .success {
+  color: #fff;
+  background-color: #00ff7d;
+  padding: 5px 0;
+} .failure {
+  color: red;
+}
+
 @media (min-width: 450px) {
-  #loginForm {
+  .wrapper {
     position: fixed;
     top: 50%;
     left: 50%;

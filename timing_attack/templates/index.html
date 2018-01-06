@@ -2,15 +2,20 @@
 <html>
   <head>
     <title>Log In</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <form id="loginForm">
-      <p>ENTER PASS<wbr>WORD</p>
-      <input type="password" id="password" autofocus>
-      <input type="submit" value="SUBMIT" id="submit">
-    </form>
+    <div class="wrapper">
+      <form id="loginForm">
+        <p>ENTER PASS<wbr>WORD</p>
+        <input type="password" id="password" autofocus required>
+        <input type="submit" value="SUBMIT" id="submit">
+        <div id="message"></div>
+      </form>
+      <a href="/bugs">bug bounty</a>
+    </div>
+    <script src="/static/app.js"></script>
   </body>
 </html>
