@@ -17,9 +17,9 @@ p {
   word-break: break-word;
 }
 
-a {
-  font-size: 25px;
+.footer {
   float: right;
+  font-size: 25px;
 }
 
 #loginForm {
