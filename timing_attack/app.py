@@ -51,3 +51,11 @@ def index():
     Renders the main web page that prompts for login
     """
     return render_template("index.html")
+
+
+@app.route("/bugs")
+def bugs():
+    """
+    Renders the details of the bug bounty
+    """
+    return render_template("bugs.html", email=app.config["EMAIL"])

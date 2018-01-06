@@ -3,3 +3,4 @@ Configuration file containing the password. Rename this to config.py
 if you want to run the server on your own computer.
 """
 PASSWORD = "hunter2"
+EMAIL = "abc@example.com" # used for bug bounty page
