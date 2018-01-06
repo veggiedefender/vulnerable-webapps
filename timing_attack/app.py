@@ -10,12 +10,12 @@ app = Flask(__name__)
 app.config.from_object("config")
 
 
-def secure_compare(secret, attempt):
+def secure_compare(password, attempt):
     """
     Compares strings for equality, sleeping 200 milliseconds per character to
     discourage brute forcing while maintaining usability.
     """
-    for chars in zip_longest(secret, attempt):
+    for chars in zip_longest(password, attempt):
         if chars[0] != chars[1]:
             return False
         time.sleep(0.2)
