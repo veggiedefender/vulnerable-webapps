@@ -48,6 +48,9 @@ p {
   color: #fff;
   box-shadow: 6px 6px 0 black;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 } #submit:hover {
   box-shadow: 12px 12px 0 black;
 }
